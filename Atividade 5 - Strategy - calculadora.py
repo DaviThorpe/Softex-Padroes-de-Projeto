@@ -12,20 +12,20 @@ from abc import ABC, abstractmethod
 
 class Operacao(ABC):
     @abstractmethod
-    def faz_conta(self, n1, n2):
+    def execute(self, n1, n2):
         pass
 
 class Soma(Operacao):
-    def faz_conta(self, n1, n2):
+    def execute(self, n1, n2):
         return n1 + n2
        
 
 class Subtracao(Operacao):
-    def faz_conta(self, n1, n2):
+    def execute(self, n1, n2):
         return n1 - n2
 
 class Multiplicacao(Operacao):
-    def faz_conta(self, n1, n2):
+    def execute(self, n1, n2):
         return n1 * n2
 
 class Calculadora():
@@ -61,7 +61,7 @@ class Calculadora():
         self._operador = operador
 
     def __call__(self):
-        return (self._operador.faz_conta(self.num1, self.num2))
+        return (self._operador.execute(self.num1, self.num2))
 
 
 # Aqui já fiz sabendo o que estava fazendo, preciso de mais estudo para entender completamente a etapa anterior
