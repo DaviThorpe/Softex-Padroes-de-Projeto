@@ -31,7 +31,7 @@ class AdaptadorPato(Galinha):
     def __init__(self, som_pato):
         self.som_pato = som_pato 
     
-    def provide_eletricy(self):
+    def faz_qua(self):
         self.som_pato.fazqua()
 
 def AdaptadorPatoDemo():
