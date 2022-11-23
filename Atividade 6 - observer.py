@@ -36,3 +36,5 @@ text.removeLine(0)
 print(bloco_notas)
 
 #teste()
+#https://algoritmosempython.com.br/cursos/programacao-python/listas/
+#https://acervolima.com/category/python-list-functions/
