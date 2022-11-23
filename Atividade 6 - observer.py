@@ -16,20 +16,23 @@ class Editor():
     pass
 
 class TextEditor(Editor):
-    def insertLine(self, lineNumber, text):
-        self.lineNumber = lineNumber
-        self.text = text
-
-        bloco_notas.append(text)
+    def insertLine(lineNumber: int, text: str):
+       
+        bloco_notas.insert(lineNumber,text)
     
-    def removeLine(self, lineNumber):
-        self.lineNumber = lineNumber
-        pass
+    def removeLine(lineNumber: int):
+        del bloco_notas[lineNumber]
+
 
 def teste ():   
     print(bloco_notas)
 
 text = TextEditor
-text.insertLine('Hello')
+text.insertLine(0,'Hello')
+print(bloco_notas)
+text.insertLine(0, 'Ola porra')
+print(bloco_notas)
+text.removeLine(0)
+print(bloco_notas)
 
-teste()
+#teste()
