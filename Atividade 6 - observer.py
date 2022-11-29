@@ -16,25 +16,34 @@ class Editor():
     pass
 
 class TextEditor(Editor):
+    
     def insertLine(lineNumber: int, text: str):
        
         bloco_notas.insert(lineNumber,text)
     
     def removeLine(lineNumber: int):
         del bloco_notas[lineNumber]
+    
+    def __init__(self, lineNumber, text):
+        self.lineNumber = lineNumber
+        self.text = text
+    
+    def open ():
+        text = ''
+        while text != 'EOF':
+            texto = TextEditor
+            texto.insertLine(0,'Hello')
+            print(bloco_notas)
+            texto.insertLine(0, 'Ola! Mundo')
+            print(bloco_notas)
+            texto.removeLine(0)
+            print(bloco_notas)
+            text = 'EOF'
 
-
-def teste ():   
+def print_bloco_notas ():   
     print(bloco_notas)
 
-text = TextEditor
-text.insertLine(0,'Hello')
-print(bloco_notas)
-text.insertLine(0, 'Ola porra')
-print(bloco_notas)
-text.removeLine(0)
-print(bloco_notas)
+TextEditor.open()
+print_bloco_notas()
 
-#teste()
-#https://algoritmosempython.com.br/cursos/programacao-python/listas/
-#https://acervolima.com/category/python-list-functions/
+# Não entendi a necessidade do ultimo requerimento, o evento 'save', já que as informação já estão sendo salvas. Dessa forma deixei sem o mesmo.
